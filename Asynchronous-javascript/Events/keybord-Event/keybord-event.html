@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ON INPUT </title>
+    <link rel="stylesheet" href="./onclick.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body style="text-align:center;" onoffline="offline">
+    <div class= "mt-5" >
+      <h1>oninput</h1><hr>
+      <label for="">Enter your name:</label>
+        <input type="text" id="name" oninput="getvalue()" >
+        <span id="spanid"></span>
+
+        <h1 class="mt-3">onfocus</h1><hr>
+        <label for="">Enter your name:</label>
+        <input type="text" onfocus="alert('welcome')">
+
+        <h1 class="mt-3">onBlur</h1><hr>
+        <label for="">Enter your name:</label>
+        <input type="text" onblur="alert('welcome')">
+
+        <h1 class="mt-3">onmousemove</h1><hr>
+        <input  onmousemove="this.value=event.clientX+':'+event.clientY" value="Mouse over me">
+
+        <h1 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur blanditiis quisquam sapiente mollitia rem corrupti dolorem cumque minus pariatur dignissimos ipsa doloribus similique fugiat, quasi laborum excepturi debitis eligendi sit! ONCOPY</h1><hr>
+        <h2 oncopy="alert('Copying forbidden!');return false">
+          Don't copy
+        </h2>
+
+        <!-- onkeypress -->
+        <h1 class="mt-3">onkeypress</h1><hr>
+        <span>//out put is Console</span>
+<input type="text" onkeypress="keypres(event)">
+
+    <script>
+              let getvalue=()=>{
+                let name=document.getElementById('name').value;
+                document.getElementById('spanid').innerHTML=name
+              } 
+              keypres=(event)=>{
+                console.log(event)
+              }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
